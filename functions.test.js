@@ -1,5 +1,5 @@
 const { expect, test } = require('@jest/globals');
-import { sum,capitalize,reverseString,calculator,caesar } from './functions';
+import { sum,capitalize,reverseString,calculator,caesar,analyze } from './functions';
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
@@ -36,6 +36,17 @@ test("calcualtor.multiply", () => {
 test("caesar", () => {
   expect(caesar("Defend the East wall of the castleZz!",1))
   .toBe('Efgfoe uif Fbtu xbmm pg uif dbtumfAa!')
+})
+
+test("analyze", () => {
+  expect(analyze([1,8,3,4,2,6])).toStrictEqual(
+    {
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6
+    }
+  )
 })
 
 

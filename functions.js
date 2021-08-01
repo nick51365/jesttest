@@ -72,7 +72,23 @@ function caesar(plaintext,key){
     }
   }
   return ciphertext.join("");
-}
+};
+
+function analyze(array){
+
+  function findAverage(array){
+    let total = 0;
+    array.forEach(item => total += item);
+    return total/array.length;
+  };
+
+  return {
+    "average": findAverage(array),
+    "length" : array.length,
+    "max" : Math.max(...array),
+    "min" : Math.min(...array),
+  }
+};
 
 
 export{
@@ -81,4 +97,5 @@ export{
   reverseString,
   calculator,
   caesar,
+  analyze,
 }
